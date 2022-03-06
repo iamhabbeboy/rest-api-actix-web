@@ -5,7 +5,7 @@ use serde_json::json;
 
 #[get("/employees")]
 async fn find_all() -> Result<HttpResponse, CustomError> {
-    let employees = Employees::find_all()?;
+    let employees = web::block(|| Employees::find_all()).await.unwrap();
     Ok(HttpResponse::Ok().json(employees))
 }
 
