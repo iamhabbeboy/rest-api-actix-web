@@ -14,8 +14,7 @@ pub struct Employee {
     pub age: i32,
 }
 
-#[derive(Serialize, Deserialize, Queryable, Insertable)]
-#[table_name = "employees"]
+#[derive(Serialize, Deserialize, Queryable)]
 pub struct Employees {
     pub id: i32,
     pub first_name: String,
