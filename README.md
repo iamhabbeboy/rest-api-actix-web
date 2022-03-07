@@ -2,7 +2,7 @@
 
 # Setup
 
-- Clone
+- Clone to your local env
 - Install Postgresql https://www.postgresql.org/download
 - Create Database 
 - Setup Diesel https://diesel.rs/
